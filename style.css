@@ -1,0 +1,273 @@
+
+/* KESHAN SENSITIVE MOD */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #050505;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* LIGHTNING BACKGROUND */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 20%, #350000 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, #200000 0%, transparent 40%);
+    animation: lightning 4s infinite;
+    z-index: -1;
+}
+
+@keyframes lightning {
+    0%, 90%, 100% {
+        opacity: 0.5;
+    }
+
+    92% {
+        opacity: 1;
+        background-color: #ff000022;
+    }
+
+    94% {
+        opacity: 0.2;
+    }
+
+    96% {
+        opacity: 1;
+    }
+}
+
+/* HEADER */
+
+.header {
+    text-align: center;
+    padding: 25px 15px;
+    background: #0a0a0a;
+    border-bottom: 2px solid #ff0000;
+    box-shadow: 0 0 20px #ff000055;
+}
+
+.logo img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid red;
+    box-shadow: 0 0 20px red;
+    margin-bottom: 15px;
+}
+
+.header h1 {
+    font-size: 27px;
+    color: white;
+    text-shadow: 0 0 10px red;
+}
+
+.header h1 span {
+    color: #ff0000;
+}
+
+.header p {
+    margin-top: 10px;
+    color: #ff5555;
+    font-size: 12px;
+}
+
+/* MAIN */
+
+main {
+    max-width: 600px;
+    margin: auto;
+    padding: 15px;
+}
+
+/* WELCOME */
+
+.welcome {
+    text-align: center;
+    padding: 25px 15px;
+    margin: 20px 0;
+    background: linear-gradient(145deg, #160000, #080808);
+    border: 1px solid #ff0000;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #ff000033;
+}
+
+.welcome h2 {
+    color: #ff3333;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.welcome p {
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* PHONE SECTION */
+
+.phone-section {
+    background: #101010;
+    padding: 20px;
+    border: 1px solid #ff0000;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.phone-section h2 {
+    text-align: center;
+    color: red;
+    margin-bottom: 20px;
+}
+
+/* INPUTS */
+
+input,
+select {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    background: #050505;
+    color: white;
+    border: 1px solid #ff2222;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    box-shadow: 0 0 12px red;
+}
+
+/* BUTTONS */
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(90deg, #990000, #ff0000);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ff000055;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px red;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* SETTINGS */
+
+.settings-section {
+    background: #101010;
+    padding: 20px;
+    border: 1px solid red;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.settings-section h2 {
+    text-align: center;
+    color: #ff3333;
+    margin-bottom: 20px;
+}
+
+.settings-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1b1b1b;
+    padding: 15px;
+    border-left: 4px solid red;
+    border-radius: 8px;
+}
+
+.setting span {
+    color: #dddddd;
+    font-size: 15px;
+}
+
+.setting strong {
+    color: #ff3333;
+    font-size: 20px;
+    text-shadow: 0 0 8px red;
+}
+
+/* NOTICE */
+
+.notice {
+    color: #999999;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+#message {
+    color: #00ff88;
+    text-align: center;
+    margin-top: 12px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #080808;
+    border-top: 1px solid red;
+    color: #ff4444;
+    font-size: 13px;
+}
+
+footer p {
+    margin: 8px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 480px) {
+
+    .header h1 {
+        font-size: 23px;
+    }
+
+    .welcome h2 {
+        font-size: 18px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .phone-section,
+    .settings-section {
+        padding: 15px;
+    }
+}
